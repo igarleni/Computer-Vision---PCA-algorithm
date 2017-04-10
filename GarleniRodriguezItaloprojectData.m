@@ -1,4 +1,4 @@
-function Z = ApellidosNombreprojectData(X, U, K)
+function Z = GarleniRodriguezItaloprojectData(X, U, K)
 %ApellidosNombrePROJECTDATA Computes the reduced data representation when projecting only 
 %on to the top k eigenvectors
 %   Z = ApellidosNombreprojectData(X, U, K) computes the projection of 
@@ -19,6 +19,12 @@ Z = zeros(size(X, 1), K);
 %
 
 % INCLUYE TU CÓDIGO AQUÍ
+
+for i = 1:size(X, 1)
+    x = X(i,:)';
+    Z(i) = x' * U(1,1:K);
+end
+
 
 % =============================================================
 

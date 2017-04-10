@@ -1,4 +1,4 @@
-function X_rec = ApellidosNombrerecoverData(Z, U, K)
+function X_rec = GarleniRodriguezItalorecoverData(Z, U, K)
 %APELLIDOSNOMBRERECOVERDATA Recovers an approximation of the original data when using the 
 %projected data
 %   X_rec = APELLIDOSNOMBRERECOVERDATA(Z, U, K) recovers an approximation the 

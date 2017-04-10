@@ -52,7 +52,7 @@ fprintf('\nRunning PCA on example dataset.\n\n');
 [X_norm, mu, sigma] = featureNormalize(X);
 
 %  Run PCA
-[U, S] = ApellidosNombrepca(X_norm);
+[U, S] = GarleniRodriguezItalopca(X_norm);
 
 %  Compute mu, the mean of the each feature
 
@@ -84,17 +84,17 @@ fprintf('\nDimension reduction on example dataset.\n\n');
 plot(X_norm(:, 1), X_norm(:, 2), 'bo');
 axis([-4 3 -4 3]); axis square
 
-%  You should complete the code in ApellidosNombreprojectData.m
+%  You should complete the code in GarleniRodriguezItaloprojectData.m
 %  Project the data onto K = 1 dimension
 K = 1;
-Z = ApellidosNombreprojectData(X_norm, U, K);
+Z = GarleniRodriguezItaloprojectData(X_norm, U, K);
 fprintf('Projection of the first example: %f\n', Z(1));
 fprintf('\n(this value should be about 1.481274)\n\n');
 
-%  You should complete the code in ApellidosNombrerecoverData.m
+%  You should complete the code in GarleniRodriguezItalorecoverData.m
 %  Project the data onto K = 1 dimension
 
-X_rec  = ApellidosNombrerecoverData(Z, U, K);
+X_rec  = GarleniRodriguezItalorecoverData(Z, U, K);
 fprintf('Approximation of the first example: %f %f\n', X_rec(1, 1), X_rec(1, 2));
 fprintf('\n(this value should be about  -1.047419 -1.047419)\n\n');
 
