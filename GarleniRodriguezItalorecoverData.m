@@ -1,7 +1,7 @@
 function X_rec = GarleniRodriguezItalorecoverData(Z, U, K)
-%APELLIDOSNOMBRERECOVERDATA Recovers an approximation of the original data when using the 
+%GarleniRodriguezItalorecoverData Recovers an approximation of the original data when using the 
 %projected data
-%   X_rec = APELLIDOSNOMBRERECOVERDATA(Z, U, K) recovers an approximation the 
+%   X_rec = GarleniRodriguezItalorecoverData(Z, U, K) recovers an approximation the 
 %   original data that has been reduced to K dimensions. It returns the
 %   approximate reconstruction in X_rec.
 %
@@ -23,6 +23,13 @@ X_rec = zeros(size(Z, 1), size(U, 1));
 
 
 % INCLUYE TU CÓDIGO AQUÍ
+
+for i = 1:size(X_rec, 1)
+    for j = 1:size(X_rec, 2)
+        v = Z(i,:)';
+        X_rec(i, j) = v' * U(j, 1:K)';
+    end
+end
 
 % =============================================================
 
