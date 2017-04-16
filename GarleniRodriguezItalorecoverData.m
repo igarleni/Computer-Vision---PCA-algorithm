@@ -24,12 +24,9 @@ X_rec = zeros(size(Z, 1), size(U, 1));
 
 % INCLUYE TU CÓDIGO AQUÍ
 
-for i = 1:size(X_rec, 1)
-    for j = 1:size(X_rec, 2)
-        v = Z(i,:)';
-        X_rec(i, j) = v' * U(j, 1:K)';
-    end
-end
+v = Z(:,:)';
+X_rec = v' * U(:, 1:K)';
+
 
 % =============================================================
 
